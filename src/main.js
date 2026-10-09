@@ -1,4 +1,5 @@
 import './styles.css';
+import './touch-controls.css';
 import { AIRCRAFT, SAVE_KEY, planeById, facilityById, cash, airportById, clamp } from './data.js';
 import { loadCompany, newCompany, saveCompany, buyAircraft, buildFacility, buyLot, upgradeRunway, serviceAircraft, transact, advanceTime, buyBranch, buyBranchLot, buildBranchFacility, installUpgrade, rebaseAircraft, selectedPlane } from './state.js';
 import { refreshContracts, acceptContract, acceptManifest, reorderStops, cancelContract, updateMission } from './missions.js';
@@ -7,6 +8,7 @@ import { Flight, Controls } from './flight.js';
 import { World } from './world.js';
 import { UI } from './ui.js';
 import { EngineAudio } from './audio.js';
+import { bindTouchControls } from './touch-controls.js';
 
 const state=loadCompany();
 if(!state.mission&&(!state.contracts.length||!state.contracts.some(c=>c.category==='cargo'&&c.supply)))refreshContracts(state);
@@ -170,6 +172,7 @@ function action(name,id,data={}){
   }
   if(name==='airport'){ui.selectedAirport=id;ui.renderPanel();return;}
   if(name==='camera'){flight.cameraMode=(flight.cameraMode+1)%3;ui.updateHUD();return;}
+  if(name==='throttle-preset'){if(!ui.panel){flight.throttle=clamp(Number(id)/100,0,1);ui.updateHUD();}return;}
   if(name==='flaps'){if(flight.spec.helicopter)return;flight.flaps=!flight.flaps;ui.toast(`Flaps ${flight.flaps?'extended for takeoff & landing':'retracted for cruise'}.`);return;}
   if(name==='hold'){
     if(flight.grounded||flight.spec.helicopter)return;
@@ -207,15 +210,7 @@ document.querySelector('#app').addEventListener('change',async e=>{
   }catch(error){ui.toast(error.message||'The save file could not be imported.','error');}
 });
 
-for(const button of document.querySelectorAll('[data-touch]')){
-  const [key,raw]=button.dataset.touch.split(':'),value=raw==='true'?true:Number(raw);
-  button.addEventListener('pointerdown',e=>{
-    e.preventDefault();audio.start();button.setPointerCapture(e.pointerId);controls.touch[key]=value;
-    if(key==='interact')controls.pressed.add('TouchInteract');button.classList.add('pressed');
-  });
-  const release=()=>{controls.touch[key]=typeof value==='boolean'?false:0;button.classList.remove('pressed');};
-  button.addEventListener('pointerup',release);button.addEventListener('pointercancel',release);button.addEventListener('lostpointercapture',release);
-}
+bindTouchControls(document.querySelector('#app'),controls,()=>audio.start(),()=>ready&&!ui.panel);
 window.addEventListener('beforeunload',()=>{if(ready)persist();});
 document.addEventListener('visibilitychange',()=>{
   controls.clear();if(document.hidden&&ready&&state.started&&!ui.panel)ui.open('settings');

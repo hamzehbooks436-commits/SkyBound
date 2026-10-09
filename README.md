@@ -92,3 +92,10 @@ World scenery uses instancing, airport surfaces are merged, and nearby obstacle 
 ## Verification status
 
 The original Blender exports and renders were inspected. The eight new models were exported through live Blender MCP, and the facilities and ground crew were visually inspected in Blender. Source changes were reviewed by reading the files. **No game tests, syntax checks, production builds, browser previews, or gameplay checks were run**, following the existing requested no-testing constraint. The expanded game, save migration, flight balance, airport activity, and responsive panel layouts remain unverified at runtime.
+
+
+### iPad controls update
+
+Touch devices show a proportional flight stick, separate ground-steering buttons, a large throttle slider with IDLE / FULL shortcuts, and hold buttons for brakes, equipment, and interaction. Multiple fingers can operate different controls together. Inputs clear on pause, focus loss, pointer cancellation, and orientation changes. Game text cannot be accidentally selected; touch flight controls prevent page zoom, and management panels retain vertical scrolling.
+
+This update passed seven automated input regression tests and a production build. Chrome touch emulation was checked at 1024 × 768 and 768 × 1024, including simultaneous stick / brake and stick / throttle input, cancellation, and selection / viewport-scale checks. No physical iPad or Safari was available. Earlier verification limitations for the wider simulation still apply.

@@ -1,0 +1,72 @@
+/* Touch layout also applies to wide iPads and hybrid laptops. */
+.touch-device{--edge-left:max(14px,env(safe-area-inset-left));--edge-right:max(14px,env(safe-area-inset-right));--edge-bottom:max(10px,env(safe-area-inset-bottom))}
+.touch-device .topbar{left:var(--edge-left);right:var(--edge-right);top:max(10px,env(safe-area-inset-top))}
+.touch-device .touch-controls{display:flex;position:absolute;left:var(--edge-left);right:var(--edge-right);bottom:calc(var(--edge-bottom) + 166px);align-items:flex-end;justify-content:space-between;gap:12px;pointer-events:none}
+.touch-flight,.touch-engine{pointer-events:auto;touch-action:none}
+.touch-flight{width:172px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.touch-label{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--ink);text-shadow:0 1px 3px #fff}
+.flight-stick{width:148px;height:148px;position:relative;border-radius:50%;border:2px solid #f4f7e9c9;background:#183c418c;box-shadow:0 4px 20px #183c4126;touch-action:none;cursor:grab;overflow:hidden}
+.stick-cross{position:absolute;inset:18%;border:1px solid #f3f7df40;border-radius:50%}
+.stick-cross:before,.stick-cross:after{content:'';position:absolute;background:#f3f7df55;left:50%;top:50%;transform:translate(-50%,-50%)}
+.stick-cross:before{width:1px;height:100%}.stick-cross:after{width:100%;height:1px}
+.stick-knob{position:absolute;left:50%;top:50%;width:52px;height:52px;border-radius:50%;background:#e5edc8;box-shadow:0 2px 12px #102d3b66;border:2px solid #f8faeb;transform:translate(calc(-50% + var(--stick-x,0px)),calc(-50% + var(--stick-y,0px)));pointer-events:none}
+.stick-center{position:absolute;top:calc(50% - 5px);left:0;right:0;text-align:center;font-size:9px;color:#365754;font-weight:700;pointer-events:none;transform:translate(var(--stick-x,0px),var(--stick-y,0px))}
+.flight-stick.pressed .stick-knob{background:#cbdc8f}.touch-rudder{display:flex;gap:6px;width:100%;margin-top:4px}
+.touch-engine{width:192px;padding:12px;border-radius:12px;background:#f5f7edf0;border:1px solid #fff9;box-shadow:0 4px 20px #183c4126}
+.touch-engine>label{display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:.6px}
+.touch-engine input{width:100%;height:44px;margin:4px 0;accent-color:#315e57}
+.touch-power{display:flex;gap:6px;margin-bottom:8px}.touch-power button{flex:1}
+.touch-device .touch-buttons{display:flex;flex-direction:column;gap:6px}
+.touch-device .touch-controls button{min-height:44px;border:1px solid #b8c8a4;border-radius:7px;padding:8px 6px;font-size:10px;font-weight:650;background:#edf2dd;color:#294e48;touch-action:none}
+.touch-device .touch-controls button.pressed{background:#284f4b;color:#f3f8d4;transform:none}
+.touch-device .toolbar{left:var(--edge-left);right:var(--edge-right);bottom:var(--edge-bottom);justify-content:space-around;gap:0;padding:5px;min-height:62px}
+.touch-device .toolbar button{flex-direction:column;font-size:10px;min-width:44px;min-height:48px;padding:7px 6px;gap:4px}
+.touch-device .toolbar kbd,.touch-device .toolbar-divider{display:none}
+.touch-device .cockpit{left:var(--edge-left);right:var(--edge-right);bottom:calc(var(--edge-bottom) + 76px);transform:none;min-width:0;height:80px;justify-content:space-around;gap:12px;padding:10px 16px}
+.touch-device .cockpit .throttle-control{display:none}
+.touch-device .flight-actions{left:50%;right:auto;transform:translateX(-50%);bottom:calc(var(--edge-bottom) + 168px);display:flex;gap:5px;max-width:none}
+.touch-device .flight-actions button{min-height:44px;padding:8px;font-size:9px;white-space:nowrap}
+.touch-device .flight-actions kbd{display:none}
+.touch-device .minimap{right:calc(var(--edge-right) + 210px);bottom:calc(var(--edge-bottom) + 225px);width:150px;height:112px}
+.touch-device .minimap-open{right:calc(var(--edge-right) + 210px);bottom:calc(var(--edge-bottom) + 205px);width:150px}
+.touch-device .flight-warning{bottom:calc(var(--edge-bottom) + 355px);font-size:10px}
+.touch-device .panel-host{bottom:calc(var(--edge-bottom) + 76px)}
+.touch-device .welcome-open .panel-host{bottom:var(--edge-bottom)}
+.touch-device .icon-button{min-width:44px;min-height:44px}
+.touch-device .management-panel button{min-height:44px}
+.touch-device .management-panel input:not([type=range]):not([type=checkbox]),.touch-device .management-panel select{font-size:16px}
+.touch-device .world-caption{display:none}
+@media(max-width:900px){
+  .touch-device .topbar .location-pill{display:none}
+  .touch-device .mission-card{max-width:280px;max-height:230px;overflow:auto;touch-action:pan-y}
+  .touch-device .minimap,.touch-device .minimap-open{display:none}
+  .touch-device .navigation-tag{left:auto;right:var(--edge-right);transform:none;max-width:220px;white-space:normal}
+}
+@media(max-width:600px){
+  .touch-device .touch-flight{width:144px}.touch-device .flight-stick{width:124px;height:124px}
+  .touch-device .touch-engine{width:166px;padding:9px}
+  .touch-device .touch-controls button{font-size:9px}
+  .touch-device .toolbar button{font-size:7px;min-width:34px;padding:7px 2px}
+  .touch-device .cockpit{height:64px;bottom:calc(var(--edge-bottom) + 69px);gap:8px;padding:8px}
+  .touch-device .cockpit .small-instruments{display:none}
+  .touch-device .cockpit .instrument{min-width:65px}
+  .touch-device .cockpit .instrument strong{font-size:26px}
+  .touch-device .touch-controls{bottom:calc(var(--edge-bottom) + 193px)}
+  .touch-device .flight-actions{bottom:calc(var(--edge-bottom) + 140px);width:calc(100% - 28px);justify-content:space-between}
+  .touch-device .flight-actions button:first-child{display:flex}
+  .touch-device .flight-warning{bottom:calc(var(--edge-bottom) + 465px);max-width:95%}
+  .touch-device .mission-card{top:82px;max-height:145px;width:220px}
+  .touch-device .navigation-tag{max-width:120px;top:82px}
+}
+@media(max-height:650px) and (min-width:601px){
+  .touch-device .mission-card{display:none}
+  .touch-device .flight-stick{width:112px;height:112px}
+  .touch-device .touch-flight{width:152px}
+  .touch-device .touch-engine{width:180px;padding:7px}
+  .touch-device .touch-engine input{margin:0;height:36px}
+  .touch-device .touch-controls{bottom:calc(var(--edge-bottom) + 144px)}
+  .touch-device .touch-controls button{min-height:40px}
+  .touch-device .cockpit{height:64px;bottom:calc(var(--edge-bottom) + 68px)}
+  .touch-device .flight-actions{bottom:calc(var(--edge-bottom) + 143px)}
+  .touch-device .minimap,.touch-device .minimap-open{display:none}
+}

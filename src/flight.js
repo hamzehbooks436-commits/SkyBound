@@ -160,7 +160,7 @@ export class Flight {
 
 export class Controls {
   constructor() {
-    this.keys=new Set();this.pressed=new Set();this.touch={pitch:0,bank:0,rudder:0,throttleDelta:0,brake:false,action:false,interact:false};
+    this.keys=new Set();this.pressed=new Set();this.onClear=new Set();this.touch={pitch:0,bank:0,rudder:0,throttleDelta:0,brake:false,action:false,interact:false};
     window.addEventListener('keydown',e=>{
       if(e.target.matches('textarea,select,input:not([type="range"]):not([type="checkbox"]):not([type="file"])')) return;
       if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code)) e.preventDefault();
@@ -171,7 +171,7 @@ export class Controls {
     window.addEventListener('blur',()=>this.clear());
   }
   consume(key){const yes=this.pressed.has(key);this.pressed.delete(key);return yes;}
-  clear(){this.keys.clear();this.pressed.clear();for(const k of Object.keys(this.touch))this.touch[k]=typeof this.touch[k]==='boolean'?false:0;}
+  clear(){this.keys.clear();this.pressed.clear();for(const k of Object.keys(this.touch))this.touch[k]=typeof this.touch[k]==='boolean'?false:0;for(const reset of this.onClear)reset();}
   read() {
     const k=this.keys,gamepad=navigator.getGamepads?.()[0];
     const padInteract=!!gamepad?.buttons[2]?.pressed;
