@@ -212,6 +212,10 @@ document.querySelector('#app').addEventListener('change',async e=>{
 
 bindTouchControls(document.querySelector('#app'),controls,()=>audio.start(),()=>ready&&!ui.panel);
 window.addEventListener('beforeunload',()=>{if(ready)persist();});
+window.addEventListener('skybound-pause',()=>{
+  controls.clear();if(ready&&state.started&&!ui.panel)ui.open('settings');
+  if(ready)persist();
+});
 document.addEventListener('visibilitychange',()=>{
   controls.clear();if(document.hidden&&ready&&state.started&&!ui.panel)ui.open('settings');
   if(ready)persist();

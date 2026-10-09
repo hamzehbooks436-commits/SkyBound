@@ -3,3 +3,6 @@ dist/
 *.blend1
 *.blend2
 .DS_Store
+build/
+output/
+*.ipa
