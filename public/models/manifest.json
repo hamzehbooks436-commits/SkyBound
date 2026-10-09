@@ -1,0 +1,591 @@
+{
+  "title": "Skybound Airworks original Blender MCP kit",
+  "authoring": "Live Blender MCP / original procedural meshes",
+  "count": 73,
+  "assets": [
+    {
+      "id": "courier_starter",
+      "category": "aircraft",
+      "file": "courier_starter.glb",
+      "meshes": 29,
+      "vertices": 402,
+      "faces": 311
+    },
+    {
+      "id": "courier_twin",
+      "category": "aircraft",
+      "file": "courier_twin.glb",
+      "meshes": 33,
+      "vertices": 442,
+      "faces": 363
+    },
+    {
+      "id": "medical_turboprop",
+      "category": "aircraft",
+      "file": "medical_turboprop.glb",
+      "meshes": 37,
+      "vertices": 474,
+      "faces": 387
+    },
+    {
+      "id": "fire_waterbomber",
+      "category": "aircraft",
+      "file": "fire_waterbomber.glb",
+      "meshes": 32,
+      "vertices": 390,
+      "faces": 371
+    },
+    {
+      "id": "agricultural_duster",
+      "category": "aircraft",
+      "file": "agricultural_duster.glb",
+      "meshes": 38,
+      "vertices": 510,
+      "faces": 395
+    },
+    {
+      "id": "tour_floatplane",
+      "category": "aircraft",
+      "file": "tour_floatplane.glb",
+      "meshes": 32,
+      "vertices": 378,
+      "faces": 329
+    },
+    {
+      "id": "survey_scout",
+      "category": "aircraft",
+      "file": "survey_scout.glb",
+      "meshes": 32,
+      "vertices": 446,
+      "faces": 351
+    },
+    {
+      "id": "rescue_helicopter",
+      "category": "aircraft",
+      "file": "rescue_helicopter.glb",
+      "meshes": 17,
+      "vertices": 226,
+      "faces": 216
+    },
+    {
+      "id": "heavy_freighter",
+      "category": "aircraft",
+      "file": "heavy_freighter.glb",
+      "meshes": 41,
+      "vertices": 538,
+      "faces": 451
+    },
+    {
+      "id": "tour_airliner",
+      "category": "aircraft",
+      "file": "tour_airliner.glb",
+      "meshes": 37,
+      "vertices": 466,
+      "faces": 383
+    },
+    {
+      "id": "hangar_small",
+      "category": "headquarters",
+      "file": "hangar_small.glb",
+      "meshes": 29,
+      "vertices": 230,
+      "faces": 173
+    },
+    {
+      "id": "hangar_large",
+      "category": "headquarters",
+      "file": "hangar_large.glb",
+      "meshes": 39,
+      "vertices": 310,
+      "faces": 233
+    },
+    {
+      "id": "dispatch_office",
+      "category": "headquarters",
+      "file": "dispatch_office.glb",
+      "meshes": 18,
+      "vertices": 176,
+      "faces": 148
+    },
+    {
+      "id": "control_tower",
+      "category": "headquarters",
+      "file": "control_tower.glb",
+      "meshes": 8,
+      "vertices": 76,
+      "faces": 54
+    },
+    {
+      "id": "fuel_depot",
+      "category": "headquarters",
+      "file": "fuel_depot.glb",
+      "meshes": 9,
+      "vertices": 140,
+      "faces": 88
+    },
+    {
+      "id": "maintenance_shop",
+      "category": "headquarters",
+      "file": "maintenance_shop.glb",
+      "meshes": 16,
+      "vertices": 126,
+      "faces": 95
+    },
+    {
+      "id": "cargo_warehouse",
+      "category": "headquarters",
+      "file": "cargo_warehouse.glb",
+      "meshes": 17,
+      "vertices": 134,
+      "faces": 101
+    },
+    {
+      "id": "medical_station",
+      "category": "headquarters",
+      "file": "medical_station.glb",
+      "meshes": 15,
+      "vertices": 120,
+      "faces": 90
+    },
+    {
+      "id": "fire_response_station",
+      "category": "headquarters",
+      "file": "fire_response_station.glb",
+      "meshes": 5,
+      "vertices": 56,
+      "faces": 38
+    },
+    {
+      "id": "tour_terminal",
+      "category": "headquarters",
+      "file": "tour_terminal.glb",
+      "meshes": 18,
+      "vertices": 152,
+      "faces": 112
+    },
+    {
+      "id": "agricultural_store",
+      "category": "headquarters",
+      "file": "agricultural_store.glb",
+      "meshes": 5,
+      "vertices": 62,
+      "faces": 41
+    },
+    {
+      "id": "helipad",
+      "category": "headquarters",
+      "file": "helipad.glb",
+      "meshes": 12,
+      "vertices": 144,
+      "faces": 192
+    },
+    {
+      "id": "radar_station",
+      "category": "headquarters",
+      "file": "radar_station.glb",
+      "meshes": 4,
+      "vertices": 82,
+      "faces": 106
+    },
+    {
+      "id": "apron_stand",
+      "category": "headquarters",
+      "file": "apron_stand.glb",
+      "meshes": 5,
+      "vertices": 40,
+      "faces": 30
+    },
+    {
+      "id": "solar_canopy",
+      "category": "headquarters",
+      "file": "solar_canopy.glb",
+      "meshes": 10,
+      "vertices": 80,
+      "faces": 60
+    },
+    {
+      "id": "tree_oak",
+      "category": "nature",
+      "file": "tree_oak.glb",
+      "meshes": 4,
+      "vertices": 50,
+      "faces": 69
+    },
+    {
+      "id": "tree_pine",
+      "category": "nature",
+      "file": "tree_pine.glb",
+      "meshes": 4,
+      "vertices": 36,
+      "faces": 32
+    },
+    {
+      "id": "tree_palm",
+      "category": "nature",
+      "file": "tree_palm.glb",
+      "meshes": 8,
+      "vertices": 40,
+      "faces": 22
+    },
+    {
+      "id": "tree_autumn",
+      "category": "nature",
+      "file": "tree_autumn.glb",
+      "meshes": 4,
+      "vertices": 50,
+      "faces": 69
+    },
+    {
+      "id": "cactus",
+      "category": "nature",
+      "file": "cactus.glb",
+      "meshes": 5,
+      "vertices": 66,
+      "faces": 43
+    },
+    {
+      "id": "rock_boulder",
+      "category": "nature",
+      "file": "rock_boulder.glb",
+      "meshes": 1,
+      "vertices": 12,
+      "faces": 20
+    },
+    {
+      "id": "rock_desert",
+      "category": "nature",
+      "file": "rock_desert.glb",
+      "meshes": 1,
+      "vertices": 12,
+      "faces": 20
+    },
+    {
+      "id": "rock_snow",
+      "category": "nature",
+      "file": "rock_snow.glb",
+      "meshes": 1,
+      "vertices": 12,
+      "faces": 20
+    },
+    {
+      "id": "rock_coastal",
+      "category": "nature",
+      "file": "rock_coastal.glb",
+      "meshes": 1,
+      "vertices": 12,
+      "faces": 20
+    },
+    {
+      "id": "wind_turbine",
+      "category": "landmark",
+      "file": "wind_turbine.glb",
+      "meshes": 5,
+      "vertices": 64,
+      "faces": 54
+    },
+    {
+      "id": "lighthouse",
+      "category": "landmark",
+      "file": "lighthouse.glb",
+      "meshes": 4,
+      "vertices": 71,
+      "faces": 47
+    },
+    {
+      "id": "water_tower",
+      "category": "landmark",
+      "file": "water_tower.glb",
+      "meshes": 6,
+      "vertices": 79,
+      "faces": 55
+    },
+    {
+      "id": "radio_mast",
+      "category": "landmark",
+      "file": "radio_mast.glb",
+      "meshes": 11,
+      "vertices": 100,
+      "faces": 72
+    },
+    {
+      "id": "town_house",
+      "category": "settlement",
+      "file": "town_house.glb",
+      "meshes": 8,
+      "vertices": 62,
+      "faces": 47
+    },
+    {
+      "id": "town_house_teal",
+      "category": "settlement",
+      "file": "town_house_teal.glb",
+      "meshes": 8,
+      "vertices": 62,
+      "faces": 47
+    },
+    {
+      "id": "farm_barn",
+      "category": "settlement",
+      "file": "farm_barn.glb",
+      "meshes": 12,
+      "vertices": 94,
+      "faces": 71
+    },
+    {
+      "id": "farm_house",
+      "category": "settlement",
+      "file": "farm_house.glb",
+      "meshes": 10,
+      "vertices": 78,
+      "faces": 59
+    },
+    {
+      "id": "desert_adobe",
+      "category": "settlement",
+      "file": "desert_adobe.glb",
+      "meshes": 8,
+      "vertices": 64,
+      "faces": 48
+    },
+    {
+      "id": "island_bungalow",
+      "category": "settlement",
+      "file": "island_bungalow.glb",
+      "meshes": 8,
+      "vertices": 62,
+      "faces": 47
+    },
+    {
+      "id": "mountain_cabin",
+      "category": "settlement",
+      "file": "mountain_cabin.glb",
+      "meshes": 8,
+      "vertices": 62,
+      "faces": 47
+    },
+    {
+      "id": "city_midrise",
+      "category": "settlement",
+      "file": "city_midrise.glb",
+      "meshes": 46,
+      "vertices": 368,
+      "faces": 276
+    },
+    {
+      "id": "city_tower",
+      "category": "settlement",
+      "file": "city_tower.glb",
+      "meshes": 96,
+      "vertices": 768,
+      "faces": 576
+    },
+    {
+      "id": "city_office",
+      "category": "settlement",
+      "file": "city_office.glb",
+      "meshes": 88,
+      "vertices": 704,
+      "faces": 528
+    },
+    {
+      "id": "resort_hotel",
+      "category": "settlement",
+      "file": "resort_hotel.glb",
+      "meshes": 42,
+      "vertices": 336,
+      "faces": 252
+    },
+    {
+      "id": "hospital",
+      "category": "settlement",
+      "file": "hospital.glb",
+      "meshes": 30,
+      "vertices": 240,
+      "faces": 180
+    },
+    {
+      "id": "factory",
+      "category": "settlement",
+      "file": "factory.glb",
+      "meshes": 15,
+      "vertices": 132,
+      "faces": 96
+    },
+    {
+      "id": "airport_terminal",
+      "category": "settlement",
+      "file": "airport_terminal.glb",
+      "meshes": 14,
+      "vertices": 112,
+      "faces": 84
+    },
+    {
+      "id": "crop_patch",
+      "category": "nature",
+      "file": "crop_patch.glb",
+      "meshes": 7,
+      "vertices": 56,
+      "faces": 42
+    },
+    {
+      "id": "orchard_tree",
+      "category": "nature",
+      "file": "orchard_tree.glb",
+      "meshes": 5,
+      "vertices": 60,
+      "faces": 88
+    },
+    {
+      "id": "cargo_pallet",
+      "category": "prop",
+      "file": "cargo_pallet.glb",
+      "meshes": 6,
+      "vertices": 48,
+      "faces": 36
+    },
+    {
+      "id": "fuel_truck",
+      "category": "vehicle",
+      "file": "fuel_truck.glb",
+      "meshes": 8,
+      "vertices": 108,
+      "faces": 70
+    },
+    {
+      "id": "ambulance",
+      "category": "vehicle",
+      "file": "ambulance.glb",
+      "meshes": 12,
+      "vertices": 128,
+      "faces": 88
+    },
+    {
+      "id": "tractor",
+      "category": "vehicle",
+      "file": "tractor.glb",
+      "meshes": 7,
+      "vertices": 104,
+      "faces": 66
+    },
+    {
+      "id": "fishing_boat",
+      "category": "vehicle",
+      "file": "fishing_boat.glb",
+      "meshes": 4,
+      "vertices": 40,
+      "faces": 40
+    },
+    {
+      "id": "shipping_container",
+      "category": "prop",
+      "file": "shipping_container.glb",
+      "meshes": 11,
+      "vertices": 88,
+      "faces": 66
+    },
+    {
+      "id": "windsock",
+      "category": "prop",
+      "file": "windsock.glb",
+      "meshes": 5,
+      "vertices": 76,
+      "faces": 48
+    },
+    {
+      "id": "runway_light",
+      "category": "prop",
+      "file": "runway_light.glb",
+      "meshes": 2,
+      "vertices": 24,
+      "faces": 28
+    },
+    {
+      "id": "fence_section",
+      "category": "prop",
+      "file": "fence_section.glb",
+      "meshes": 4,
+      "vertices": 32,
+      "faces": 24
+    },
+    {
+      "id": "bush",
+      "category": "nature",
+      "file": "bush.glb",
+      "meshes": 1,
+      "vertices": 12,
+      "faces": 20
+    },
+    {
+      "id": "rescue_camp",
+      "category": "prop",
+      "file": "rescue_camp.glb",
+      "meshes": 3,
+      "vertices": 22,
+      "faces": 17
+    },
+    {
+      "id": "branch_terminal",
+      "category": "regional-expansion",
+      "file": "branch_terminal.glb",
+      "meshes": 23,
+      "vertices": 2808,
+      "faces": 2054
+    },
+    {
+      "id": "branch_hangar",
+      "category": "regional-expansion",
+      "file": "branch_hangar.glb",
+      "meshes": 23,
+      "vertices": 2120,
+      "faces": 1574
+    },
+    {
+      "id": "branch_depot",
+      "category": "regional-expansion",
+      "file": "branch_depot.glb",
+      "meshes": 19,
+      "vertices": 240,
+      "faces": 158
+    },
+    {
+      "id": "branch_warehouse",
+      "category": "regional-expansion",
+      "file": "branch_warehouse.glb",
+      "meshes": 23,
+      "vertices": 2484,
+      "faces": 1819
+    },
+    {
+      "id": "branch_sign",
+      "category": "regional-expansion",
+      "file": "branch_sign.glb",
+      "meshes": 5,
+      "vertices": 5088,
+      "faces": 3764
+    },
+    {
+      "id": "ground_crew",
+      "category": "regional-expansion",
+      "file": "ground_crew.glb",
+      "meshes": 14,
+      "vertices": 148,
+      "faces": 114
+    },
+    {
+      "id": "airport_passenger",
+      "category": "regional-expansion",
+      "file": "airport_passenger.glb",
+      "meshes": 13,
+      "vertices": 124,
+      "faces": 100
+    },
+    {
+      "id": "baggage_cart",
+      "category": "regional-expansion",
+      "file": "baggage_cart.glb",
+      "meshes": 20,
+      "vertices": 228,
+      "faces": 154
+    }
+  ]
+}
