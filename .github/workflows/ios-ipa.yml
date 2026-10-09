@@ -59,7 +59,7 @@ jobs:
         run: |
           mkdir -p build/Payload
           cp -R build/SkyBound.xcarchive/Products/Applications/App.app build/Payload/
-          xcrun lipo -verify_arch arm64 build/Payload/App.app/App
+          xcrun lipo build/Payload/App.app/App -verify_arch arm64
           ditto -c -k --keepParent build/Payload output/SkyBound-unsigned.ipa
           python3 tools/verify_ipa.py output/SkyBound-unsigned.ipa
           cp IOS-INSTALL.md output/INSTALL.txt
